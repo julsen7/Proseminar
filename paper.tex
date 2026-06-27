@@ -1,0 +1,306 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[a4paper, margin=3cm]{geometry}
+\onecolumn
+\usepackage[english]{babel}
+
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{etoolbox}
+\usepackage{caption}
+
+\makeatletter
+\AtEndEnvironment{lstlisting}{\xdef\xlang{\lst@language}}
+\AfterEndEnvironment{lstlisting}{
+  \vspace*{-1.5em}
+  \begin{flushright}\xlang
+\end{flushright}}
+\makeatother
+
+\lstdefinelanguage{Logo}{
+  morekeywords={to, end, forward, fd, backward, bk, right, rt, left, lt, repeat, stop, sqrt, if, ifelse},
+  sensitive=false,
+  morecomment=[l]{;},
+  alsoletter={:},
+  moredelim=[s][\color{orange}]{:}{\ }
+}
+
+\lstset{
+  language=Logo,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue}\bfseries,
+  commentstyle=\color{green!60!black},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  frame=single,
+  breaklines=true
+}
+
+\usepackage{csquotes}
+\usepackage[backend=biber, style=numeric]{biblatex}
+\addbibresource{literatur.bib}
+
+\title{Recursion, Fractals and space-filling curves in Logo}
+\author{Alina Musaeva \and Julian Schwarzer \and Lars Wittner}
+\date{27.07.2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  Yeah its a paper about logo i guess lol xD \cite{hromkovic2010einfuhrung}.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+\dots
+
+\section{Recursion}
+In addition to these basic commands we are now capable of writing some actual procedures.
+For that we first have to introduce the concept of recursion an fractals which make up a large part of Logo as a functional programming language.
+
+\subsection{Concept}
+Recursion has its origin in the latin word \textit{recurrere (to go back)}. A recursive written function has to contain three key parts:
+
+\begin{enumerate}
+  \item Base case
+  \item Calling itself
+  \item Recursive step
+\end{enumerate}
+
+The base case will be a condition that indicates on what case our recursive calls will end up terminating.
+We need this due to our limitations of storage and to avoid an infinite amount of calls on our call stack.
+To acctually reach this base case we need a recursive step that needs to be provided by our recursive call that approaches our base case.
+
+\begin{lstlisting}[title={Fibonacci numbers}, language=Java]
+  private static int fib(int n) {
+    if (n <= 0) return -1; // wrong input
+    if (n == 1) return 0; // base case 1
+    if (n == 2) return 1; // base case 2
+    return fib(n - 1) + fib(n - 2); // recursive call
+  }
+\end{lstlisting}
+
+In this java implementation of the Fibonacci numbers you can see that there are also multiple base cases possible because the first Fibonacci number has to be 0 and the second one needs to be 1.
+After these base cases the recursive call with the recursive steps are embedded in the returned value of this method.
+As you might notice there might be a problem by this implementation.
+
+Very important is that the recursive step actually reaches our base case. In this example each reduction (\(n-1\) and \(n-2\)) will either reach our first or our second base case and terminate.
+If we would have skipped our base case and not had filtered out our wrong inputs (\(n<=0\)) we would not terminate and the recursion will end up in an infinite loop.
+
+The phrase \textit{depth of  recursion} determines the amount of nested recursive funtions inside of itself.
+
+Recursion often finds usage in science like mathematics or computer science \textit{eg. factorials, Fibonacci}.
+
+\newpage
+\subsection{Example: Pythagoras tree}
+
+The pythrgoras tree is a very common example for explaining recursion.
+Its main shape is a square with recursively placed squares on top of the base square rotated by a predefined angular that calculates based on the famous Pythagoras formula.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/pythagoras_tree.png}
+  \caption*{Pythagoras tree}
+  \label{fig:example}
+\end{figure}
+
+To implement this we will use the previously explained scheme.
+
+We declare our procedure within the first line (keyword \textit{to}) with its name being \textit{pythagoras} an two needed parameters (indicated by the colons) as \textit{length} and \textit{depth} and end ouzr definition with the keyword \textit{end} in our last line.
+
+\begin{lstlisting}
+  to pythagoras :length :depth
+    ...
+  end
+\end{lstlisting}
+
+After this we have our main form drawn (the square) which will be drawn by repeating four times going forward and then turning right.
+
+\begin{lstlisting}
+  repeat 4 [fd :length rt 90]
+\end{lstlisting}
+
+Now we write down our base case what translates to our program to end the procedure if we reach a depth of 0. The depth represents the maximum amount of squares placed on top of another square (recursion depth).
+
+\begin{lstlisting}
+  if :depth = 0 [stop]
+\end{lstlisting}
+
+We and up at our starting position at the left bottom corner of the just drawn sqaure. To draw our recursive sqaures we need to correct our position.
+For that we are going forward by our length and continue b rotating to the left by 45 degree which will be our predefined rotation so both sqares will have the exact same length and our Pyrthagoras tree becomes axially symmetric.
+
+\begin{lstlisting}
+  fd :length lt 45
+\end{lstlisting}
+
+\newpage
+Our recursive squares are then drawn with a reduced length in the scale of the Pythagoras formula and a depth that decreases by 1 which ensures the base case of depth 0 will be reached at some point.
+
+\begin{lstlisting}
+  pythagoras :length / (sqrt 2) :depth - 1
+\end{lstlisting}
+
+Because we use an angle of 45 degree the following derivation explaines the new length:
+We assume our hypothenusis as \textit{a} and our two kathets as length \textit{b}.
+
+According to Pythagoras:
+\begin{align*}
+  a^2 + a^2 &= b^2 \\
+  2a^2 &= b^2 \\
+  \sqrt{2}a &= b \\
+  b &= \frac{a}{\sqrt{2}}
+\end{align*}
+
+Now we need to correct our position again to resume with the second square.
+
+\begin{lstlisting}
+  rt 90 fd :length / (sqrt 2)
+\end{lstlisting}
+
+Now at the right starting point for our last square, we perform the same actions as our first square.
+
+\begin{lstlisting}
+  pythagoras :length / (sqrt 2) :depth - 1
+\end{lstlisting}
+
+After each recursive depth we return to the position of the previous one (\textit{depth + 1}).
+
+\begin{lstlisting}
+  bk :length / (sqrt 2) lt 45 bk :length
+\end{lstlisting}
+
+Our resulting procedure will result in the following:
+
+\begin{lstlisting}[title={Pythagoras tree}]
+to pythagoras :length :depth ; variable length and depth
+  repeat 4 [fd :length rt 90] ; square
+  if :depth = 0 [stop] ; base case
+  fd :length lt 45 ; change pos
+  pythagoras :length / (sqrt 2) :depth - 1 ; recursive left
+  rt 90 fd :length / (sqrt 2) ; change pos
+  pythagoras :length / (sqrt 2) :depth - 1 ; recursive right
+  bk :length / (sqrt 2) lt 45 bk :length ; go back
+end
+\end{lstlisting}
+
+\newpage
+\section{Fractals}
+
+\subsection{Concept}
+
+Fractals are the idea of performing a recursion with a \textit{recursion depth} of infinity.
+Like recursion, fractals also have their orign in a latin word (\textit{fracere (to break)}).
+
+Fractals are a theoretical concept that cannot be used in reality again due to eg. the finite resolution a monitor has.
+
+The main prooperty of fractals are the \textit{self-similarity} which means yu can identify the fractal itself as a part of itself by imagining to zoom infinitely in.
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}[b]{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{images/golden_ratio.png}
+    \caption*{Golden ratio}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.45\textwidth}
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/triangle.png}
+    \caption*{Triangle}
+  \end{minipage}
+\end{figure}
+
+In order to be able to work with fractals nonetheless we can use visualisation by recursion with a relatively high recursion depth a.
+The depth of recursion is ther scale of sharpness a fractal image has.
+
+\subsection{Example: Koch flake}
+
+The Koch flake became quite popular for its simplistic form and minimal lines of code for a quite nice looking shape of a snowflake.
+First described by Helge von Koch in 1904 is is made up of three triangular shaped Koch curves. These koch curves follow simple rules.
+At first a Koch curve simply is a line with a length. By increasing the depth there will be placed Koch flakes on top of this line forming a tringle on top of the line. The higher the depth the more triangles are place don top of eachother.
+
+We bin declaring our Koch curve in the same wayas we did with the Pyrthagoras tree.
+
+\begin{lstlisting}
+  to curve :length :depth
+    ...
+  end
+\end{lstlisting}
+
+After this we have our main form drawn (the square) which will be drawn by repeating four times going forward and then turning right.
+
+\begin{lstlisting}
+  ; base case: if depth is 0, move forward and stop
+  if :depth = 0 [fd :length stop]
+\end{lstlisting}
+
+Now we write down our base case what translates to our program to end the procedure if we reach a depth of 0. The depth represents the maximum amount of squares placed on top of another square (recursion depth).
+
+\begin{lstlisting}
+  ; fractal part 1/4 (move)
+  curve :length / 3 :depth - 1
+\end{lstlisting}
+
+We and up at our starting position at the left bottom corner of the just drawn sqaure. To draw our recursive sqaures we need to correct our position.
+For that we are going forward by our length and continue b rotating to the left by 45 degree which will be our predefined rotation so both sqares will have the exact same length and our Pyrthagoras tree becomes axially symmetric.
+
+\begin{lstlisting}
+  ; fractal part 2/4 (turn left and move)
+  lt 60
+  curve :length / 3 :depth - 1
+\end{lstlisting}
+
+Our recursive squares are then drawn with a reduced length in the scale of the Pythagoras formula and a depth that decreases by 1 which ensures the base case of depth 0 will be reached at some point.
+
+\begin{lstlisting}
+  ; fractal part 3/4 (turn right and move)
+  rt 120
+  curve :length / 3 :depth - 1
+\end{lstlisting}
+
+Our recursive squares are then drawn with a reduced length in the scale of the Pythagoras formula and a depth that decreases by 1 which ensures the base case of depth 0 will be reached at some point.
+
+\begin{lstlisting}
+  ; fractal part 4/4 (turn left and move)
+  lt 60
+  curve :length / 3 :depth - 1
+\end{lstlisting}
+
+So now we have our Koch curve to get the shape of a snowflake we simply need to expend it by another procedure \textit{flake} 
+that repeats our \textit{curve} three times and between each curve it rotates the turtle so we have a shape of a triangle.
+
+\begin{lstlisting}[title={Kock flake}]
+  ; procedure with parameters length and depth
+  to curve :length :depth
+    ; base case: if depth is 0, move forward and stop
+    if :depth = 0 [fd :length stop]
+    ; fractal part 1/4 (move)
+    curve :length / 3 :depth - 1
+    ; fractal part 2/4 (turn left and move)
+    lt 60
+    curve :length / 3 :depth - 1
+    ; fractal part 3/4 (turn right and move)
+    rt 120
+    curve :length / 3 :depth - 1
+    ; fractal part 4/4 (turn left and move)
+    lt 60
+    curve :length / 3 :depth - 1
+  end
+
+  to flake :depth
+    ; 3 sides of base triagle form
+    repeat 3 [
+      curve 200 :depth
+      rt 120 ; turn right to next triangle base side
+    ]
+  end
+\end{lstlisting}
+
+\newpage
+\printbibliography
+\end{document}
