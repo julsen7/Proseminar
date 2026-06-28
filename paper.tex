@@ -224,7 +224,7 @@ The Koch flake became quite popular for its simplistic form and minimal lines of
 First described by Helge von Koch in 1904 is is made up of three triangular shaped Koch curves. These koch curves follow simple rules.
 At first a Koch curve simply is a line with a length. By increasing the depth there will be placed Koch flakes on top of this line forming a tringle on top of the line. The higher the depth the more triangles are place don top of eachother.
 
-We bin declaring our Koch curve in the same wayas we did with the Pyrthagoras tree.
+We will declaring our Koch curve in the same way as we did with the Pyrthagoras tree.
 
 \begin{lstlisting}
   to curve :length :depth
@@ -232,40 +232,25 @@ We bin declaring our Koch curve in the same wayas we did with the Pyrthagoras tr
   end
 \end{lstlisting}
 
-After this we have our main form drawn (the square) which will be drawn by repeating four times going forward and then turning right.
+We will start by defining our terminiation condition (our \textit{base case}) as drawing a \textit{length}-long straight line.
 
-\begin{lstlisting}
+\begin{lstlisting}[title=Part 1/4:]
   ; base case: if depth is 0, move forward and stop
   if :depth = 0 [fd :length stop]
 \end{lstlisting}
 
+For achieving our Koch curve with a triangular shape placed on a line, our Koch curve consists of four parts:
 Now we write down our base case what translates to our program to end the procedure if we reach a depth of 0. The depth represents the maximum amount of squares placed on top of another square (recursion depth).
 
 \begin{lstlisting}
   ; fractal part 1/4 (move)
   curve :length / 3 :depth - 1
-\end{lstlisting}
-
-We and up at our starting position at the left bottom corner of the just drawn sqaure. To draw our recursive sqaures we need to correct our position.
-For that we are going forward by our length and continue b rotating to the left by 45 degree which will be our predefined rotation so both sqares will have the exact same length and our Pyrthagoras tree becomes axially symmetric.
-
-\begin{lstlisting}
   ; fractal part 2/4 (turn left and move)
   lt 60
   curve :length / 3 :depth - 1
-\end{lstlisting}
-
-Our recursive squares are then drawn with a reduced length in the scale of the Pythagoras formula and a depth that decreases by 1 which ensures the base case of depth 0 will be reached at some point.
-
-\begin{lstlisting}
   ; fractal part 3/4 (turn right and move)
   rt 120
   curve :length / 3 :depth - 1
-\end{lstlisting}
-
-Our recursive squares are then drawn with a reduced length in the scale of the Pythagoras formula and a depth that decreases by 1 which ensures the base case of depth 0 will be reached at some point.
-
-\begin{lstlisting}
   ; fractal part 4/4 (turn left and move)
   lt 60
   curve :length / 3 :depth - 1

@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber paper"] 1782555098.87358 "paper.bcf" "paper.bbl" "paper" 1782555486.52016 0
-  "literatur.bib" 1782555025.25968 839 51ddd1f3b041ada409bc65ca15ea0c31 ""
-  "paper.bcf" 1782555486.46709 108628 13d8d3083a850ef752aae2fb4c9a5331 "pdflatex"
+["biber paper"] 1782600785.45969 "paper.bcf" "paper.bbl" "paper" 1782619851.5896 0
+  "literatur.bib" 1782600786.34266 3005 21ebb588b5b7116f392a136494cf9c47 ""
+  "paper.bcf" 1782619851.53573 108628 13d8d3083a850ef752aae2fb4c9a5331 "pdflatex"
   (generated)
   "paper.bbl"
   "paper.blg"
   (rewritten before read)
-["pdflatex"] 1782555485.82726 "/home/julsen/Proseminar/paper.tex" "paper.pdf" "paper" 1782555486.52046 0
-  "/home/julsen/Proseminar/paper.tex" 1782555485.73258 11388 317c7ae3f766de837634a23362b28e9e ""
+["pdflatex"] 1782619850.9098 "/home/julsen/Proseminar/paper.tex" "paper.pdf" "paper" 1782619851.58997 0
+  "/home/julsen/Proseminar/paper.tex" 1782619850.75714 10616 1f71a7284e8ea95fb5cef3b4f9116a10 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1775415801 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1775415801 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1775415801 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -114,11 +114,11 @@
   "images/golden_ratio.png" 1782552268.51175 18918 a78c0b7b07480df12a701217f7ff614e ""
   "images/pythagoras_tree.png" 1782544186.49602 236320 7636bb6820637850d3ea4589703e9fa3 ""
   "images/triangle.png" 1782552330.17018 101624 90b4ed81c5cf86f1810be92ab8c534b1 ""
-  "paper.aux" 1782555486.46509 1325 b4ad77f370a7e01080383bb91bad9f50 "pdflatex"
-  "paper.bbl" 1782555099.45076 1671 a966bd828e26d8c263a3ca4de327808d "biber paper"
-  "paper.run.xml" 1782555486.46835 2311 939755aa8dd5af397a3212189b67faf5 "pdflatex"
-  "paper.tex" 1782555485.73258 11388 317c7ae3f766de837634a23362b28e9e ""
-  "paper.toc" 1782555486.46835 465 c434982f2114aa0dbf21a9188a03c617 "pdflatex"
+  "paper.aux" 1782619851.53373 1325 07cd509b1c6393c0f3c0d636d8e8b8fa "pdflatex"
+  "paper.bbl" 1782600786.03112 1671 a966bd828e26d8c263a3ca4de327808d "biber paper"
+  "paper.run.xml" 1782619851.53769 2311 939755aa8dd5af397a3212189b67faf5 "pdflatex"
+  "paper.tex" 1782619850.75714 10616 1f71a7284e8ea95fb5cef3b4f9116a10 ""
+  "paper.toc" 1782619851.53769 465 c434982f2114aa0dbf21a9188a03c617 "pdflatex"
   (generated)
   "paper.aux"
   "paper.bcf"
