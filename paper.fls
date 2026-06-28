@@ -217,11 +217,11 @@ INPUT ./images/golden_ratio.png
 INPUT ./images/golden_ratio.png
 INPUT ./images/golden_ratio.png
 INPUT ./images/golden_ratio.png
-INPUT ./images/triangle.png
-INPUT ./images/triangle.png
-INPUT ./images/triangle.png
-INPUT ./images/triangle.png
-INPUT ./images/triangle.png
+INPUT ./images/sierpinski_triangle.png
+INPUT ./images/sierpinski_triangle.png
+INPUT ./images/sierpinski_triangle.png
+INPUT ./images/sierpinski_triangle.png
+INPUT ./images/sierpinski_triangle.png
 INPUT paper.aux
 INPUT paper.run.xml
 OUTPUT paper.run.xml

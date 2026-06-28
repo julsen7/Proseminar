@@ -99,19 +99,17 @@ Recursion often finds usage in science like mathematics or computer science \tex
 \newpage
 \subsection{Example: Pythagoras tree}
 
-The pythrgoras tree is a very common example for explaining recursion.
-Its main shape is a square with recursively placed squares on top of the base square rotated by a predefined angular that calculates based on the famous Pythagoras formula.
-
-\begin{figure}[h]
+\begin{figure}[t]
   \centering
   \includegraphics[width=0.5\textwidth]{images/pythagoras_tree.png}
-  \caption*{Pythagoras tree}
-  \label{fig:example}
+  \caption{Pythagoras tree}
+  \label{fig:Pythagoras tree}
 \end{figure}
 
-To implement this we will use the previously explained scheme.
+The pythrgoras tree is a very common example for explaining recursion.
+Its main shape is a square with recursively placed squares on top of the base square rotated by a predefined angular that calculates based on the famous Pythagoras formula (\ref{fig:Pythagoras tree}).
 
-We declare our procedure within the first line (keyword \textit{to}) with its name being \textit{pythagoras} an two needed parameters (indicated by the colons) as \textit{length} and \textit{depth} and end ouzr definition with the keyword \textit{end} in our last line.
+To implement this we will use the previously explained scheme: We declare our procedure within the first line (keyword \textit{to}) with its name being \textit{pythagoras} an two needed parameters (indicated by the colons) as \textit{length} and \textit{depth} and end ouzr definition with the keyword \textit{end} in our last line.
 
 \begin{lstlisting}
   to pythagoras :length :depth
@@ -200,18 +198,20 @@ Fractals are a theoretical concept that cannot be used in reality again due to e
 
 The main prooperty of fractals are the \textit{self-similarity} which means yu can identify the fractal itself as a part of itself by imagining to zoom infinitely in.
 
-\begin{figure}[h]
+\begin{figure}[t]
   \centering
   \begin{minipage}[b]{0.45\textwidth}
     \centering
     \includegraphics[width=\textwidth]{images/golden_ratio.png}
-    \caption*{Golden ratio}
+    \caption{Golden ratio}
+    \label{fig:Golden ratio}
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.7\textwidth]{images/triangle.png}
-    \caption*{Triangle}
+    \includegraphics[width=0.7\textwidth]{images/sierpinski_triangle.png}
+    \caption{Sierpiński triangle}
+    \label{fig:Sierpiński triangle}
   \end{minipage}
 \end{figure}
 

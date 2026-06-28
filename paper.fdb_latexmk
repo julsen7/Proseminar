@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber paper"] 1782600785.45969 "paper.bcf" "paper.bbl" "paper" 1782619851.5896 0
+["biber paper"] 0 "paper.bcf" "paper.bbl" "paper" 1782676832.65957 -1
   "literatur.bib" 1782600786.34266 3005 21ebb588b5b7116f392a136494cf9c47 ""
-  "paper.bcf" 1782619851.53573 108628 13d8d3083a850ef752aae2fb4c9a5331 "pdflatex"
+  "paper.bcf" 1782676832.58606 108628 13d8d3083a850ef752aae2fb4c9a5331 "pdflatex"
   (generated)
   "paper.bbl"
   "paper.blg"
   (rewritten before read)
-["pdflatex"] 1782619850.9098 "/home/julsen/Proseminar/paper.tex" "paper.pdf" "paper" 1782619851.58997 0
-  "/home/julsen/Proseminar/paper.tex" 1782619850.75714 10616 1f71a7284e8ea95fb5cef3b4f9116a10 ""
+["pdflatex"] 1782676831.72482 "/home/julsen/Proseminar/paper.tex" "paper.pdf" "paper" 1782676832.66017 0
+  "/home/julsen/Proseminar/paper.tex" 1782676830.61731 10737 daf1b44883a648a9aa11210d10a04e4e ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1775415801 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1775415801 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1775415801 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -113,12 +113,12 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1782532732 2328189 bf09e56c9b5a7fa2344d6679aba2f2ad ""
   "images/golden_ratio.png" 1782552268.51175 18918 a78c0b7b07480df12a701217f7ff614e ""
   "images/pythagoras_tree.png" 1782544186.49602 236320 7636bb6820637850d3ea4589703e9fa3 ""
-  "images/triangle.png" 1782552330.17018 101624 90b4ed81c5cf86f1810be92ab8c534b1 ""
-  "paper.aux" 1782619851.53373 1325 07cd509b1c6393c0f3c0d636d8e8b8fa "pdflatex"
+  "images/sierpinski_triangle.png" 1782552330.17018 101624 90b4ed81c5cf86f1810be92ab8c534b1 ""
+  "paper.aux" 1782676832.58306 1745 c64dd89c94cd081bba790925247a7ee4 "pdflatex"
   "paper.bbl" 1782600786.03112 1671 a966bd828e26d8c263a3ca4de327808d "biber paper"
-  "paper.run.xml" 1782619851.53769 2311 939755aa8dd5af397a3212189b67faf5 "pdflatex"
-  "paper.tex" 1782619850.75714 10616 1f71a7284e8ea95fb5cef3b4f9116a10 ""
-  "paper.toc" 1782619851.53769 465 c434982f2114aa0dbf21a9188a03c617 "pdflatex"
+  "paper.run.xml" 1782676832.58803 2311 939755aa8dd5af397a3212189b67faf5 "pdflatex"
+  "paper.tex" 1782676830.61731 10737 daf1b44883a648a9aa11210d10a04e4e ""
+  "paper.toc" 1782676832.58803 465 c434982f2114aa0dbf21a9188a03c617 "pdflatex"
   (generated)
   "paper.aux"
   "paper.bcf"
