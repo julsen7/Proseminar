@@ -1,14 +1,16 @@
 # Fdb version 4
-["biber paper"] 0 "paper.bcf" "paper.bbl" "paper" 1782676832.65957 -1
+["biber paper"] 1782763886.26955 "paper.bcf" "paper.bbl" "paper" 1782764397.20365 0
   "literatur.bib" 1782600786.34266 3005 21ebb588b5b7116f392a136494cf9c47 ""
-  "paper.bcf" 1782676832.58606 108628 13d8d3083a850ef752aae2fb4c9a5331 "pdflatex"
+  "paper.bcf" 1782764397.13776 108628 13d8d3083a850ef752aae2fb4c9a5331 "pdflatex"
   (generated)
   "paper.bbl"
   "paper.blg"
   (rewritten before read)
-["pdflatex"] 1782676831.72482 "/home/julsen/Proseminar/paper.tex" "paper.pdf" "paper" 1782676832.66017 0
-  "/home/julsen/Proseminar/paper.tex" 1782676830.61731 10737 daf1b44883a648a9aa11210d10a04e4e ""
+["pdflatex"] 1782764396.33524 "/home/julsen/Proseminar/paper.tex" "paper.pdf" "paper" 1782764397.20397 0
+  "/home/julsen/Proseminar/paper.tex" 1782764395.05538 23573 01e9aba6d765ef134f4db2e616ff1788 ""
+  "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1775415801 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1775415801 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1775415801 1536 02c06700a42be0f5a28664c7273f82e7 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1775415801 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1775415801 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1775415801 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -35,6 +37,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1775415801 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1775415801 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1775415801 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1775415801 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1775415801 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1775415801 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1775415801 32362 179c33bbf43f19adbb3825bb4e36e57a ""
@@ -43,6 +46,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1775415801 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1775415801 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1775415801 31099 c85edf1dd5b9e826d67c9c7293b6786c ""
+  "/usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb" 1775415801 145929 f25e56369a345c4ff583b067cd87ce8e ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1775415801 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/babel-english/english.ldf" 1775415801 7008 9ff5fdcc865b01beca2b0fe4a46231d4 ""
   "/usr/share/texmf-dist/tex/generic/babel/babel.sty" 1775415801 147019 f2ca437186bfeb562e1066ad59426a04 ""
@@ -111,19 +115,23 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1775415801 43569 fd570f2fa160877d211e859f687312ba ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1782532767 5385779 47c0c393a77fd4a098bacfd57d66b88a ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1782532732 2328189 bf09e56c9b5a7fa2344d6679aba2f2ad ""
+  "images/bc1.jpeg" 1782763704.9949 21646 bf415f21a8f57925c8c055340bc4f80a ""
+  "images/branch_bsp.png" 1782763167.04096 14467 69e1ba1aad4244af8523d3d198acb744 ""
+  "images/edge_bsp.png" 1782763181.34322 10104 e62d647451b7ec1937d9a70e39b191d3 ""
   "images/golden_ratio.png" 1782552268.51175 18918 a78c0b7b07480df12a701217f7ff614e ""
+  "images/muster_bsp.png" 1782763173.27307 109156 6ab11f0219070f5263dbf9734188732c ""
+  "images/node_bsp.png" 1782763185.91731 10786 adef234cf16a412437ebf25314e130eb ""
+  "images/produktionsregel_bsp1.png" 1782763190.86459 67216 6a4f89214ea55858d0e0ececd4485a84 ""
   "images/pythagoras_tree.png" 1782544186.49602 236320 7636bb6820637850d3ea4589703e9fa3 ""
   "images/sierpinski_triangle.png" 1782552330.17018 101624 90b4ed81c5cf86f1810be92ab8c534b1 ""
-  "paper.aux" 1782676832.58306 1745 c64dd89c94cd081bba790925247a7ee4 "pdflatex"
-  "paper.bbl" 1782600786.03112 1671 a966bd828e26d8c263a3ca4de327808d "biber paper"
-  "paper.run.xml" 1782676832.58803 2311 939755aa8dd5af397a3212189b67faf5 "pdflatex"
-  "paper.tex" 1782676830.61731 10737 daf1b44883a648a9aa11210d10a04e4e ""
-  "paper.toc" 1782676832.58803 465 c434982f2114aa0dbf21a9188a03c617 "pdflatex"
+  "paper.aux" 1782764397.13476 5676 cc0229cd7d921a3befa0fbf6f86bc06e "pdflatex"
+  "paper.bbl" 1782763886.93936 1671 a966bd828e26d8c263a3ca4de327808d "biber paper"
+  "paper.run.xml" 1782764397.13972 2311 939755aa8dd5af397a3212189b67faf5 "pdflatex"
+  "paper.tex" 1782764395.05538 23573 01e9aba6d765ef134f4db2e616ff1788 ""
   (generated)
   "paper.aux"
   "paper.bcf"
   "paper.log"
   "paper.pdf"
   "paper.run.xml"
-  "paper.toc"
   (rewritten before read)
