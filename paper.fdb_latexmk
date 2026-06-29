@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber paper"] 1782763886.26955 "paper.bcf" "paper.bbl" "paper" 1782764397.20365 0
+["biber paper"] 1782767413.22394 "paper.bcf" "paper.bbl" "paper" 1782767416.43016 0
   "literatur.bib" 1782600786.34266 3005 21ebb588b5b7116f392a136494cf9c47 ""
-  "paper.bcf" 1782764397.13776 108628 13d8d3083a850ef752aae2fb4c9a5331 "pdflatex"
+  "paper.bcf" 1782767416.3648 108628 13d8d3083a850ef752aae2fb4c9a5331 "pdflatex"
   (generated)
   "paper.bbl"
   "paper.blg"
   (rewritten before read)
-["pdflatex"] 1782764396.33524 "/home/julsen/Proseminar/paper.tex" "paper.pdf" "paper" 1782764397.20397 0
-  "/home/julsen/Proseminar/paper.tex" 1782764395.05538 23573 01e9aba6d765ef134f4db2e616ff1788 ""
+["pdflatex"] 1782767415.60247 "/home/julsen/Proseminar/paper.tex" "paper.pdf" "paper" 1782767416.43059 0
+  "/home/julsen/Proseminar/paper.tex" 1782767412.91948 23422 8a46428339776a637742d2f4b1c56617 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1775415801 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1775415801 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1775415801 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -124,10 +124,10 @@
   "images/produktionsregel_bsp1.png" 1782763190.86459 67216 6a4f89214ea55858d0e0ececd4485a84 ""
   "images/pythagoras_tree.png" 1782544186.49602 236320 7636bb6820637850d3ea4589703e9fa3 ""
   "images/sierpinski_triangle.png" 1782552330.17018 101624 90b4ed81c5cf86f1810be92ab8c534b1 ""
-  "paper.aux" 1782764397.13476 5676 cc0229cd7d921a3befa0fbf6f86bc06e "pdflatex"
-  "paper.bbl" 1782763886.93936 1671 a966bd828e26d8c263a3ca4de327808d "biber paper"
-  "paper.run.xml" 1782764397.13972 2311 939755aa8dd5af397a3212189b67faf5 "pdflatex"
-  "paper.tex" 1782764395.05538 23573 01e9aba6d765ef134f4db2e616ff1788 ""
+  "paper.aux" 1782767416.3628 5408 a22b8c420be9e725e51c50351789c5bd "pdflatex"
+  "paper.bbl" 1782767413.8594 1671 a966bd828e26d8c263a3ca4de327808d "biber paper"
+  "paper.run.xml" 1782767416.36671 2311 939755aa8dd5af397a3212189b67faf5 "pdflatex"
+  "paper.tex" 1782767412.91948 23422 8a46428339776a637742d2f4b1c56617 ""
   (generated)
   "paper.aux"
   "paper.bcf"

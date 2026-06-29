@@ -19,7 +19,7 @@
 \makeatother
 
 \lstdefinelanguage{Logo}{
-  morekeywords={to, end, forward, fd, backward, bk, right, rt, left, lt, repeat, stop, sqrt, if, ifelse},
+  morekeywords={to, end, forward, back, clearscreen, penup, pendown, print, fd, backward, bk, right, rt, left, lt, repeat, stop, sqrt, if, ifelse, while, for},
   sensitive=false,
   morecomment=[l]{;},
   alsoletter={:},
@@ -50,19 +50,15 @@
 \maketitle
 
 \begin{abstract}
-  Yeah its a paper about logo i guess lol xD \cite{hromkovic2010einfuhrung}.
+  Abract content \cite{hromkovic2010einfuhrung}.
 \end{abstract}
 
 \section{Introduction}
-In Chapter 1 we will explore what Logo is, its main features and how to work with it. We will show you some base commands which are required to better understand it in other chapters. In Chapter 2, we will methodically explore the concepts of recursion and fractals using the Pythagoras tree, Koch's flake. Finally, we will cover topics such as L-System, Edge/Node Rewriting and Branching. This will enable you to understand the idea of space-filling curves in LOGO.
+In chapter 1 we will explore what Logo is, its main features and how to work with it. We will show you some base commands which are required to better understand it in other chapters. In chapter 2, we will methodically explore the concepts of recursion and fractals using the Pythagoras tree, Koch's flake. Finally, we will cover topics such as L-System, edge- and node-rewriting and branching. This will enable you to understand the idea of space-filling curves in Logo.
 
-\subsection{Motivation}
-\label{sec:motivation}
-
-Before we move on to recursion and fractals, we're going to find out what Logo is and learn some base commands.
-
-\subsection{Definition of LOGO and its origin}
+\subsection{Definition of Logo and its origin}
 \label{sec:definitionlog}
+Before we move on to recursion and fractals, we're going to find out what Logo is and learn some base commands.
 
 Logo is a programming language that is well-known for its use of turtle graphics. With Logo, you can draw different figure shapes. 
 
@@ -72,15 +68,13 @@ The original intention behind the creation of this language was to provide a mea
 
 \subsection{Turtle Graphics}
 \label{sec:turtleg}
-The turtle is pen or a cursor (often represented as a triangle) that moves after a command and draws when the pen is down. You can change the position, direction, pen state, color etc. It will all be displayed on the computer screen.
+The turtle is a pen or a cursor (often represented as a triangle) that moves after a command and draws when the pen is down. You can change the position, direction, pen state, color etc. It will all be displayed on the computer screen.
 
 \subsection{Data Types}
 \label{sec:datatypes}
-
 In Logo, data types are dynamic. This means that they do not need to be defined explicitly.
 
 There are four main data types: word, number, list and boolean.
-
 \begin{enumerate}
   \item \textit{word} is used for a sequence of characters
   \item \textit{number} for such numbers as integer, float, double etc.
@@ -90,7 +84,7 @@ There are four main data types: word, number, list and boolean.
 
 \subsection{Base commands}
 \label{sec:basecommands}
-The LOGO syntax is very intuitive. It consists of simple words, with or without parameters (see the example below). 
+The Logo syntax is very intuitive. It consists of simple words, with or without parameters (\ref{fig:abb1}). 
 
 A shortcut is also available for each command, thus avoiding the need to type the entire word each time.
 
@@ -104,12 +98,12 @@ REPEAT
 PRINT [The sentence]
 \end{lstlisting}
 
-As demonstrated in the example below, the turtle was moved forward 40 steps, rotated 110 degrees, and moved forward again 49 steps.
+As demonstrated in figure \ref{fig:abb1}, the turtle was moved forward 40 steps, rotated 110 degrees, and moved forward again 49 steps.
 
-\begin{figure}[h]
+\begin{figure}[t]
   \centering
   \includegraphics[width=10cm]{images/bc1.jpeg}
-  \caption{command forward and right in ucblogo}
+  \caption{command forward and right in ucbLogo}
   \label{fig:abb1}
 \end{figure}
 
@@ -126,47 +120,34 @@ REPEAT 4 [fd 90 rt 90]
 \end{lstlisting}
 
 \subsection{Procedures}
-\label{sec:proced}
 The following steps are required to create a procedure (function) in Logo: 
 
-Enter 'To' followed by the name of the procedure and 'End'.The commands should then be entered between these two items. Use parameters if required.
+Enter 'To' followed by the name of the procedure and 'End'. The commands should then be entered between these two items. Use parameters if required.
 
 \begin{lstlisting}
 To ProcedureName :parameter1 ... parameter 2
-
-    commands
-
+    [commands]
 End
-
 \end{lstlisting}
 
-
 \subsection{Loops}
-\label{sec:loop}
-If / Ifelse
-\begin{lstlisting}
+\begin{lstlisting}[title=If/Ifelse]
 IFELSE condition [condition true][condition false]
-
 IF condition [condition true]
 \end{lstlisting}
 
-While Loop
-\begin{lstlisting}
+\begin{lstlisting}[title=While-loop]
 WHILE [condition]
 [commands]
 \end{lstlisting}
 
-For Loop
-\begin{lstlisting}
+\begin{lstlisting}[title=For-loop]
 FOR [var start end step]
 [commands]
-
 \end{lstlisting}
 
 \section{Recursion}
-In addition to these basic commands we are now capable of writing some actual procedures.
-For that we first have to introduce the concept of recursion an fractals which make up a large part of Logo as a functional programming language.
-
+We are now capable of writing programs with these base commands but we still have to introduce recursion for a functional programming language like Logo.
 \subsection{Concept}
 Recursion has its origin in the latin word \textit{recurrere (to go back)}. A recursive written function has to contain three key parts:
 
@@ -200,7 +181,6 @@ The phrase \textit{depth of  recursion} determines the amount of nested recursiv
 
 Recursion often finds usage in science like mathematics or computer science \textit{eg. factorials, Fibonacci}.
 
-\newpage
 \subsection{Example: Pythagoras tree}
 
 \begin{figure}[t]
@@ -240,7 +220,6 @@ For that we are going forward by our length and continue b rotating to the left 
   fd :length lt 45
 \end{lstlisting}
 
-\newpage
 Our recursive squares are then drawn with a reduced length in the scale of the Pythagoras formula and a depth that decreases by 1 which ensures the base case of depth 0 will be reached at some point.
 
 \begin{lstlisting}
@@ -290,7 +269,6 @@ to pythagoras :length :depth ; variable length and depth
 end
 \end{lstlisting}
 
-\newpage
 \section{Fractals}
 
 \subsection{Concept}
