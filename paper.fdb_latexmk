@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber paper"] 1782909525.94829 "paper.bcf" "paper.bbl" "paper" 1782909527.15926 0
-  "literatur.bib" 1782909525.70909 2173 47ee7241cbaea3d7a3c8a4c5e80e2f2a ""
-  "paper.bcf" 1782909358.98685 108983 50cc14609231ae305efb7aa358cc7c90 "pdflatex"
+["biber paper"] 1782909525.94829 "paper.bcf" "paper.bbl" "paper" 1782918710.75898 0
+  "literatur.bib" 1782913800.74584 2173 47ee7241cbaea3d7a3c8a4c5e80e2f2a ""
+  "paper.bcf" 1782918710.65423 108983 50cc14609231ae305efb7aa358cc7c90 "pdflatex"
   (generated)
   "paper.bbl"
   "paper.blg"
   (rewritten before read)
-["pdflatex"] 1782909357.16931 "/home/julsen/Proseminar/paper.tex" "paper.pdf" "paper" 1782909527.15932 0
-  "/home/julsen/Proseminar/paper.tex" 1782909356.88 24438 cc42a2c6cb47e69b9db37b4a89268698 ""
+["pdflatex"] 1782918708.71023 "/home/julsen/Proseminar/paper.tex" "paper.pdf" "paper" 1782918710.75938 0
+  "/home/julsen/Proseminar/paper.tex" 1782918708.40413 24439 b4020b3df1ec8640f1cf7eddb0d41d80 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1775415801 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1775415801 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1775415801 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -123,10 +123,10 @@
   "images/produktionsregel_bsp1.png" 1782908662.64319 67216 6a4f89214ea55858d0e0ececd4485a84 ""
   "images/pythagoras_tree.png" 1782908662.64466 236320 7636bb6820637850d3ea4589703e9fa3 ""
   "images/sierpinski_triangle.png" 1782908662.64541 101624 90b4ed81c5cf86f1810be92ab8c534b1 ""
-  "paper.aux" 1782909358.97885 6430 2f1fabd25e72a037f4408b7add100a3c "pdflatex"
+  "paper.aux" 1782918710.65023 6430 2f1fabd25e72a037f4408b7add100a3c "pdflatex"
   "paper.bbl" 1782909527.11276 5870 81d4fc55370e04b057f3ef19e7d5795e "biber paper"
-  "paper.run.xml" 1782909358.98885 2311 939755aa8dd5af397a3212189b67faf5 "pdflatex"
-  "paper.tex" 1782909356.88 24438 cc42a2c6cb47e69b9db37b4a89268698 ""
+  "paper.run.xml" 1782918710.65578 2311 939755aa8dd5af397a3212189b67faf5 "pdflatex"
+  "paper.tex" 1782918708.40413 24439 b4020b3df1ec8640f1cf7eddb0d41d80 ""
   (generated)
   "paper.aux"
   "paper.bcf"
