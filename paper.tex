@@ -146,6 +146,7 @@ FOR [var start end step]
 \end{lstlisting}
 
 \section{Recursion}
+\label{sec:recursion}
 We are now capable of writing programs with these base commands but we still have to introduce recursion for a functional programming language like Logo.
 
 \subsection{Concept}
@@ -159,7 +160,7 @@ Recursion has its origin in the latin word \textit{recurrere (to go back)}. A re
 
 The base case will be a condition that indicates on what case our recursive calls will end up terminating.
 We need this due to our limitations of storage and to avoid an infinite amount of calls on our call stack.
-To acctually reach this base case we need a recursive step that needs to be provided by our recursive call that approaches our base case. \cite{geeksforgeeks}
+To acctually reach this base case we need a recursive step that needs to be provided by our recursive call that approaches our base case \cite{geeksforgeeks}.
 
 \begin{lstlisting}[title={Fibonacci numbers}, language=Java, label={lst:fibonacci}]
   private static int fib(int n) {
@@ -190,10 +191,10 @@ Recursion often finds usage in science like mathematics \textit{eg. factorials, 
   \label{fig:Pythagoras tree}
 \end{figure}
 
-The pythrgoras tree is a very common example for explaining recursion. \cite{mathworld}
-Its main shape is a square with recursively placed squares on top of the base square rotated by a predefined angular that calculates based on the famous Pythagoras formula. (\ref{fig:Pythagoras tree})
+The pythrgoras tree is a very common example for explaining recursion \cite{mathworld}.
+Its main shape is a square with recursively placed squares on top of the base square rotated by a predefined angular that calculates based on the famous Pythagoras formula (\ref{fig:Pythagoras tree}).
 
-To implement this we will use the previously explained scheme: We declare our procedure within the first line (keyword \textit{to}) with its name being \textit{pythagoras} an two needed parameters (indicated by the colons) as \textit{length} and \textit{depth} and end ouzr definition with the keyword \textit{end} in our last line.
+To implement this we will use the previously explained scheme: We declare our procedure within the first line (keyword \textit{to}) with its name being \textit{pythagoras} an two needed parameters (indicated by the colons) as \textit{length} and \textit{depth} and end our definition with the keyword \textit{end} in our last line.
 
 \begin{lstlisting}
   to pythagoras :length :depth
@@ -272,15 +273,16 @@ end
 \end{lstlisting}
 
 \section{Fractals}
+\label{sec:fractals}
 
 \subsection{Concept}
 
 To understand the possibilities of graphical approximation Logo has we need to introduce the concept of fractals.
 Fractals are the idea of performing a recursion with a \textit{recursion depth} of infinity and are selfsimilar which means they are made up of smaller copys of it self. 
-You can imagine them by "breaking" (\textit{lat. fracere}) them apart without being able to differentiate them from its parts. \cite{alfonseca1996representation}
+You can imagine them by "breaking" (\textit{lat. fracere}) them apart without being able to differentiate them from its parts \cite{alfonseca1996representation}.
 
 Fractals are a theoretical concept that cannot be used in the sense of what they mean due to physical limitations of the real world like the finite resolution a monitor has. Some well-known fractals from nature are the golden ratio (\ref{fig:Golden ratio}) or the Sierpiński triangle (\ref{fig:Sierpiński triangle}) which was long considered a purely mathematical concept.
-However, this form also occurs in the form of the enzyme citrate synthase. \cite{maxplanckgesellschaft}
+However, this form also occurs in the form of the enzyme citrate synthase \cite{maxplanckgesellschaft}.
 
 \begin{figure}[t]
   \centering
@@ -312,7 +314,7 @@ The depth of recursion is ther scale of sharpness a fractal image has.
 \end{figure}
 
 The Koch flake became quite popular for its simplistic form and minimal lines of code for a quite nice looking shape of a snowflake.
-First described by Helge von Koch in 1904 is is made up of three triangular shaped Koch curves which follow simple rules. \cite{mathworld2}
+First described by Helge von Koch in 1904 is is made up of three triangular shaped Koch curves which follow simple rules \cite{mathworld2}.
 
 At first a Koch curve simply is a line with a predefined length. By increasing the depth, there will be placed Koch flakes on top of these linees forming a tringular shaped spike on top of the base line. 
 A depth of 0 means just a straight line and the higher the depth the more triangles are placed on top of each other.
@@ -351,7 +353,7 @@ The first quarter section features a straight stretch spanning one-third of the 
 \end{lstlisting}
 
 To get a snowflake-shaped Koch flake we simply need to expend the Koch curve by another small procedure \textit{flake}.
-This flake repeats our \textit{curve} three times and rotates by 60 degree between each curve so we end up having the shape of a triangle. (\ref{fig:Koch flake})
+This flake repeats our \textit{curve} three times and rotates by 60 degree between each curve so we end up having the shape of a triangle (\ref{fig:Koch flake}).
 
 \begin{lstlisting}[title={Kock flake}]
   ; procedure with parameters length and depth
