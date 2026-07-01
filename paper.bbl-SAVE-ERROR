@@ -19,49 +19,10 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
-    \entry{geeksforgeeks}{online}{}{}
+    \entry{geeksforgeeks}{misc}{}{}
       \field{sortinit}{}
       \field{sortinithash}{495dc9894017a8b12cafa9c619d10c0c}
       \field{howpublished}{\url{https://www.geeksforgeeks.org/dsa/introduction-to-recursion-2/}}
-    \endentry
-    \entry{alfonseca1996representation}{inproceedings}{}{}
-      \name{author}{2}{}{%
-        {{hash=03029fe3031d3e6a1aa8d680194091de}{%
-           family={Alfonseca},
-           familyi={A\bibinitperiod},
-           given={Manuel},
-           giveni={M\bibinitperiod}}}%
-        {{hash=0f24ec2fbe3be9790280516d85d3d426}{%
-           family={Ortega},
-           familyi={O\bibinitperiod},
-           given={Alfonso},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{b33055348edf0f452ed9a47dfa0ec3ee}
-      \strng{fullhash}{b33055348edf0f452ed9a47dfa0ec3ee}
-      \strng{fullhashraw}{b33055348edf0f452ed9a47dfa0ec3ee}
-      \strng{bibnamehash}{b33055348edf0f452ed9a47dfa0ec3ee}
-      \strng{authorbibnamehash}{b33055348edf0f452ed9a47dfa0ec3ee}
-      \strng{authornamehash}{b33055348edf0f452ed9a47dfa0ec3ee}
-      \strng{authorfullhash}{b33055348edf0f452ed9a47dfa0ec3ee}
-      \strng{authorfullhashraw}{b33055348edf0f452ed9a47dfa0ec3ee}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the conference on designing the future}
-      \field{title}{Representation of fractal curves by means of L systems}
-      \field{year}{1996}
-      \field{pages}{13\bibrangedash 21}
-      \range{pages}{9}
-    \endentry
-    \entry{maxplanckgesellschaft}{online}{}{}
-      \field{sortinit}{E}
-      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\urls{https://www.mpg.de/21808266/erstes-fraktales-molekuel-in-der-natur-entdeckt}}
-      \field{title}{Erstes fraktales Molekül in der Natur entdeckt}
-      \field{year}{2024}
     \endentry
     \entry{hromkovic2010einfuhrung}{book}{}{}
       \name{author}{1}{}{%
@@ -90,7 +51,7 @@
       \field{volume}{206}
       \field{year}{2010}
     \endentry
-    \entry{mathworld2}{online}{}{}
+    \entry{mathworld}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=819197bfeff32a3f58d49b2a3eb0a580}{%
            family={Weisstein},
@@ -106,35 +67,13 @@
       \strng{authornamehash}{819197bfeff32a3f58d49b2a3eb0a580}
       \strng{authorfullhash}{819197bfeff32a3f58d49b2a3eb0a580}
       \strng{authorfullhashraw}{819197bfeff32a3f58d49b2a3eb0a580}
-      \field{extraname}{1}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{labelnamesource}{author}
-      \field{howpublished}{\urls{https://mathworld.wolfram.com/KochSnowflake.html}}
-    \endentry
-    \entry{mathworld}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=819197bfeff32a3f58d49b2a3eb0a580}{%
-           family={Weisstein},
-           familyi={W\bibinitperiod},
-           given={Eric\bibnamedelima W.},
-           giveni={E\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-      }
-      \strng{namehash}{819197bfeff32a3f58d49b2a3eb0a580}
-      \strng{fullhash}{819197bfeff32a3f58d49b2a3eb0a580}
-      \strng{fullhashraw}{819197bfeff32a3f58d49b2a3eb0a580}
-      \strng{bibnamehash}{819197bfeff32a3f58d49b2a3eb0a580}
-      \strng{authorbibnamehash}{819197bfeff32a3f58d49b2a3eb0a580}
-      \strng{authornamehash}{819197bfeff32a3f58d49b2a3eb0a580}
-      \strng{authorfullhash}{819197bfeff32a3f58d49b2a3eb0a580}
-      \strng{authorfullhashraw}{819197bfeff32a3f58d49b2a3eb0a580}
-      \field{extraname}{2}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\urls{https://mathworld.wolfram.com/PythagorasTree.html}}
       \field{title}{"Pythagoras Tree." From MathWorld--A Wolfram Resource.}
+      \field{year}{2000}
     \endentry
   \enddatalist
 \endrefsection

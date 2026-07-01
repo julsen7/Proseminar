@@ -8,7 +8,6 @@
 \usepackage{xcolor}
 \usepackage{listings}
 \usepackage{etoolbox}
-\usepackage{caption}
 
 \makeatletter
 \AtEndEnvironment{lstlisting}{\xdef\xlang{\lst@language}}
@@ -60,7 +59,7 @@ In chapter 1 we will explore what Logo is, its main features and how to work wit
 \label{sec:definitionlog}
 Before we move on to recursion and fractals, we're going to find out what Logo is and learn some base commands.
 
-Logo is a programming language that is well-known for its use of turtle graphics. With Logo, you can draw different figure shapes. 
+Logo is a programming language that is well-known for its use of turtle graphics. With Logo, you can draw different figure shapes.
 
 It was invented in 1966 in Cambridge (USA) by Wally Feurzeug, Seymour Papert, Daniel Bobrow and Cynthia Solomon.
 
@@ -79,12 +78,12 @@ There are four main data types: word, number, list and boolean.
   \item \textit{word} is used for a sequence of characters
   \item \textit{number} for such numbers as integer, float, double etc.
   \item \textit{list}  is a list of numbers or characters (which may for example be a sentence or an array).
-  \item \textit{bool} is for true or false 
+  \item \textit{bool} is for true or false
 \end{enumerate}
 
 \subsection{Base commands}
 \label{sec:basecommands}
-The Logo syntax is very intuitive. It consists of simple words, with or without parameters (\ref{fig:abb1}). 
+The Logo syntax is very intuitive. It consists of simple words, with or without parameters (\ref{fig:abb1}).
 
 A shortcut is also available for each command, thus avoiding the need to type the entire word each time.
 
@@ -111,7 +110,7 @@ The others commands for instance CLEARSCREEN or simply CS is used for cleaning t
 
 PENUP is used to move the turtles position without drawing and PENDOWN to return to the drawing mode.
 
-REPEAT allows commands to be repeated multiple times, thus saving time. 
+REPEAT allows commands to be repeated multiple times, thus saving time.
 
 For example we can draw a square using following command:
 
@@ -120,7 +119,7 @@ REPEAT 4 [fd 90 rt 90]
 \end{lstlisting}
 
 \subsection{Procedures}
-The following steps are required to create a procedure (function) in Logo: 
+The following steps are required to create a procedure (function) in Logo:
 
 Enter 'To' followed by the name of the procedure and 'End'. The commands should then be entered between these two items. Use parameters if required.
 
@@ -148,6 +147,7 @@ FOR [var start end step]
 
 \section{Recursion}
 We are now capable of writing programs with these base commands but we still have to introduce recursion for a functional programming language like Logo.
+
 \subsection{Concept}
 Recursion has its origin in the latin word \textit{recurrere (to go back)}. A recursive written function has to contain three key parts:
 
@@ -159,27 +159,27 @@ Recursion has its origin in the latin word \textit{recurrere (to go back)}. A re
 
 The base case will be a condition that indicates on what case our recursive calls will end up terminating.
 We need this due to our limitations of storage and to avoid an infinite amount of calls on our call stack.
-To acctually reach this base case we need a recursive step that needs to be provided by our recursive call that approaches our base case.
+To acctually reach this base case we need a recursive step that needs to be provided by our recursive call that approaches our base case. \cite{geeksforgeeks}
 
-\begin{lstlisting}[title={Fibonacci numbers}, language=Java]
+\begin{lstlisting}[title={Fibonacci numbers}, language=Java, label={lst:fibonacci}]
   private static int fib(int n) {
     if (n <= 0) return -1; // wrong input
     if (n == 1) return 0; // base case 1
     if (n == 2) return 1; // base case 2
     return fib(n - 1) + fib(n - 2); // recursive call
-  }
+    }
 \end{lstlisting}
 
-In this java implementation of the Fibonacci numbers you can see that there are also multiple base cases possible because the first Fibonacci number has to be 0 and the second one needs to be 1.
-After these base cases the recursive call with the recursive steps are embedded in the returned value of this method.
-As you might notice there might be a problem by this implementation.
+In this java implementation of the Fibonacci numbers (\ref{lst:fibonacci}) you can see that there are also multiple base cases possible.
+For this example the first Fibonacci number is defined to be 0 and the second one has to be 1. After these base cases the recursive call and its embedded recursive steps will gie us our final result of our requested nth number.
+As you might have noticed the recursive step is not only one times but two times in this example. This is due to the fact that the Fibonacci numbers are defined as the sum of the two previous numbers.
 
 Very important is that the recursive step actually reaches our base case. In this example each reduction (\(n-1\) and \(n-2\)) will either reach our first or our second base case and terminate.
-If we would have skipped our base case and not had filtered out our wrong inputs (\(n<=0\)) we would not terminate and the recursion will end up in an infinite loop.
+If we would have skipped our base case and had not filtered out wrong inputs by \(n<=0\) the method would not terminate and the recursion will end up in an infinite loop.
 
 The phrase \textit{depth of  recursion} determines the amount of nested recursive funtions inside of itself.
 
-Recursion often finds usage in science like mathematics or computer science \textit{eg. factorials, Fibonacci}.
+Recursion often finds usage in science like mathematics \textit{eg. factorials, Fibonacci} or computer science like in functional programming languages like Logo that profit from reduced lines of code and readability. 
 
 \subsection{Example: Pythagoras tree}
 
@@ -190,8 +190,8 @@ Recursion often finds usage in science like mathematics or computer science \tex
   \label{fig:Pythagoras tree}
 \end{figure}
 
-The pythrgoras tree is a very common example for explaining recursion.
-Its main shape is a square with recursively placed squares on top of the base square rotated by a predefined angular that calculates based on the famous Pythagoras formula (\ref{fig:Pythagoras tree}).
+The pythrgoras tree is a very common example for explaining recursion. \cite{mathworld}
+Its main shape is a square with recursively placed squares on top of the base square rotated by a predefined angular that calculates based on the famous Pythagoras formula. (\ref{fig:Pythagoras tree})
 
 To implement this we will use the previously explained scheme: We declare our procedure within the first line (keyword \textit{to}) with its name being \textit{pythagoras} an two needed parameters (indicated by the colons) as \textit{length} and \textit{depth} and end ouzr definition with the keyword \textit{end} in our last line.
 
@@ -201,20 +201,21 @@ To implement this we will use the previously explained scheme: We declare our pr
   end
 \end{lstlisting}
 
-After this we have our main form drawn (the square) which will be drawn by repeating four times going forward and then turning right.
+First we implement our main shape (the square) by repeating four times going forward and turning right.
 
 \begin{lstlisting}
   repeat 4 [fd :length rt 90]
 \end{lstlisting}
 
-Now we write down our base case what translates to our program to end the procedure if we reach a depth of 0. The depth represents the maximum amount of squares placed on top of another square (recursion depth).
+Now we write down our base case which means to terminate our programm at a reached depth of 0. The depth represents the maximum amount of squares placed on top of each other (recursion depth).
 
 \begin{lstlisting}
   if :depth = 0 [stop]
 \end{lstlisting}
 
 We and up at our starting position at the left bottom corner of the just drawn sqaure. To draw our recursive sqaures we need to correct our position.
-For that we are going forward by our length and continue b rotating to the left by 45 degree which will be our predefined rotation so both sqares will have the exact same length and our Pyrthagoras tree becomes axially symmetric.
+
+For that we have to reach the top left corner and rotating to the left by 45 degree which will be our predefined rotation so both squares will have the exact same length and our Pyrthagoras tree becomes axially symmetric.
 
 \begin{lstlisting}
   fd :length lt 45
@@ -226,10 +227,11 @@ Our recursive squares are then drawn with a reduced length in the scale of the P
   pythagoras :length / (sqrt 2) :depth - 1
 \end{lstlisting}
 
-Because we use an angle of 45 degree the following derivation explaines the new length:
+Because we are using an angle of 45 degree the following derivation explaines the new length:
 We assume our hypothenusis as \textit{a} and our two kathets as length \textit{b}.
 
 According to Pythagoras:
+
 \begin{align*}
   a^2 + a^2 &= b^2 \\
   2a^2 &= b^2 \\
@@ -237,13 +239,13 @@ According to Pythagoras:
   b &= \frac{a}{\sqrt{2}}
 \end{align*}
 
-Now we need to correct our position again to resume with the second square.
+We have to correct our position again to start the second recursive square.
 
 \begin{lstlisting}
   rt 90 fd :length / (sqrt 2)
 \end{lstlisting}
 
-Now at the right starting point for our last square, we perform the same actions as our first square.
+Positioned correctly, we perform the same recursiove call as our first part.
 
 \begin{lstlisting}
   pythagoras :length / (sqrt 2) :depth - 1
@@ -255,7 +257,7 @@ After each recursive depth we return to the position of the previous one (\texti
   bk :length / (sqrt 2) lt 45 bk :length
 \end{lstlisting}
 
-Our resulting procedure will result in the following:
+Our final procedure will result in the following:
 
 \begin{lstlisting}[title={Pythagoras tree}]
 to pythagoras :length :depth ; variable length and depth
@@ -273,40 +275,49 @@ end
 
 \subsection{Concept}
 
-Fractals are the idea of performing a recursion with a \textit{recursion depth} of infinity.
-Like recursion, fractals also have their orign in a latin word (\textit{fracere (to break)}).
+To understand the possibilities of graphical approximation Logo has we need to introduce the concept of fractals.
+Fractals are the idea of performing a recursion with a \textit{recursion depth} of infinity and are selfsimilar which means they are made up of smaller copys of it self. 
+You can imagine them by "breaking" (\textit{lat. fracere}) them apart without being able to differentiate them from its parts. \cite{alfonseca1996representation}
 
-Fractals are a theoretical concept that cannot be used in reality again due to eg. the finite resolution a monitor has.
-
-The main prooperty of fractals are the \textit{self-similarity} which means yu can identify the fractal itself as a part of itself by imagining to zoom infinitely in.
+Fractals are a theoretical concept that cannot be used in the sense of what they mean due to physical limitations of the real world like the finite resolution a monitor has. Some well-known fractals from nature are the golden ratio (\ref{fig:Golden ratio}) or the Sierpiński triangle (\ref{fig:Sierpiński triangle}) which was long considered a purely mathematical concept.
+However, this form also occurs in the form of the enzyme citrate synthase. \cite{maxplanckgesellschaft}
 
 \begin{figure}[t]
   \centering
-  \begin{minipage}[b]{0.45\textwidth}
+  \begin{minipage}[b]{0.5\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{images/golden_ratio.png}
+    \includegraphics[width=0.8\textwidth]{images/golden_ratio.png}
     \caption{Golden ratio}
     \label{fig:Golden ratio}
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=0.7\textwidth]{images/sierpinski_triangle.png}
+    \includegraphics[width=0.6\textwidth]{images/sierpinski_triangle.png}
     \caption{Sierpiński triangle}
     \label{fig:Sierpiński triangle}
   \end{minipage}
 \end{figure}
 
-In order to be able to work with fractals nonetheless we can use visualisation by recursion with a relatively high recursion depth a.
+In order to be able to work with fractals nonetheless we can use visualisation by recursion with a relatively high recursion depth.
 The depth of recursion is ther scale of sharpness a fractal image has.
 
 \subsection{Example: Koch flake}
 
-The Koch flake became quite popular for its simplistic form and minimal lines of code for a quite nice looking shape of a snowflake.
-First described by Helge von Koch in 1904 is is made up of three triangular shaped Koch curves. These koch curves follow simple rules.
-At first a Koch curve simply is a line with a length. By increasing the depth there will be placed Koch flakes on top of this line forming a tringle on top of the line. The higher the depth the more triangles are place don top of eachother.
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.4\textwidth]{images/koch_flake.png}
+  \caption{Koch flake}
+  \label{fig:Koch flake}
+\end{figure}
 
-We will declaring our Koch curve in the same way as we did with the Pyrthagoras tree.
+The Koch flake became quite popular for its simplistic form and minimal lines of code for a quite nice looking shape of a snowflake.
+First described by Helge von Koch in 1904 is is made up of three triangular shaped Koch curves which follow simple rules. \cite{mathworld2}
+
+At first a Koch curve simply is a line with a predefined length. By increasing the depth, there will be placed Koch flakes on top of these linees forming a tringular shaped spike on top of the base line. 
+A depth of 0 means just a straight line and the higher the depth the more triangles are placed on top of each other.
+
+We will declare our Koch curve in the same way as we did with the Pyrthagoras tree.
 
 \begin{lstlisting}
   to curve :length :depth
@@ -314,15 +325,16 @@ We will declaring our Koch curve in the same way as we did with the Pyrthagoras 
   end
 \end{lstlisting}
 
-We will start by defining our terminiation condition (our \textit{base case}) as drawing a \textit{length}-long straight line.
+We will start by defining our terminiation condition (\textit{base case}) by drawing a straight line.
 
 \begin{lstlisting}[title=Part 1/4:]
   ; base case: if depth is 0, move forward and stop
   if :depth = 0 [fd :length stop]
 \end{lstlisting}
 
-For achieving our Koch curve with a triangular shape placed on a line, our Koch curve consists of four parts:
-Now we write down our base case what translates to our program to end the procedure if we reach a depth of 0. The depth represents the maximum amount of squares placed on top of another square (recursion depth).
+For achieving our Koch curve with a triangular shape placing, our Koch curve consists of four parts: 
+
+The first quarter section features a straight stretch spanning one-third of the length. The second and third quarter represent the rotation and both of the triangle sides placed a depth on top. To finalize the curve we end up performing the same third of the length drawn in step one.
 
 \begin{lstlisting}
   ; fractal part 1/4 (move)
@@ -338,8 +350,8 @@ Now we write down our base case what translates to our program to end the proced
   curve :length / 3 :depth - 1
 \end{lstlisting}
 
-So now we have our Koch curve to get the shape of a snowflake we simply need to expend it by another procedure \textit{flake} 
-that repeats our \textit{curve} three times and between each curve it rotates the turtle so we have a shape of a triangle.
+To get a snowflake-shaped Koch flake we simply need to expend the Koch curve by another small procedure \textit{flake}.
+This flake repeats our \textit{curve} three times and rotates by 60 degree between each curve so we end up having the shape of a triangle. (\ref{fig:Koch flake})
 
 \begin{lstlisting}[title={Kock flake}]
   ; procedure with parameters length and depth
@@ -369,56 +381,56 @@ that repeats our \textit{curve} three times and between each curve it rotates th
 \end{lstlisting}
 
 \section{Lindenmayer-System}
-    The Lindenmayer-System or short the L-system was invented by Aristid Lindenmayer in 1968. He was a Hungarian Biologist who wanted to recreate plant growth as accurate as possible and for this purpose he came up with this $(V, \omega, P)$. V is the Alphabet which consists of non-terminal symbols and terminal symbols. Non-terminal symbols are symbols that will be replaced eventually, whereas terminal symbols will not be replaced at all. $\omega$ is a non-empty starting word of an L-system which will be used to form new words that will be part of the L-system. These words are created with Production rules P.
+The Lindenmayer-System or short the L-system was invented by Aristid Lindenmayer in 1968. He was a Hungarian Biologist who wanted to recreate plant growth as accurate as possible and for this purpose he came up with this $(V, \omega, P)$. V is the Alphabet which consists of non-terminal symbols and terminal symbols. Non-terminal symbols are symbols that will be replaced eventually, whereas terminal symbols will not be replaced at all. $\omega$ is a non-empty starting word of an L-system which will be used to form new words that will be part of the L-system. These words are created with Production rules P.
 \subsection{rewriting methods}
-This paper will only discuss the deterministic and context-free L-system. We start with an example to get the basic concept of those systems . When looking at $(\{a,\ b\},\ a,\ P)$ where the production rule P describes $a \rightarrow ab$ which means whenever a word contains the letter $a$ it is replaced in the next step for $ab$ and $b \rightarrow bb$ which means every $b$ will be replaced for $bb$. We start with the letter a because our starting word $\omega =a$ in our system $a$ is replaced for $ab$. now we have two letters in our word and each of them will be replaced and they are replaced simultaneously. This is a big difference compared to normal context-free languages where only one symbol is replaced at a time. $ab$ becomes $abbb$ because the $a$ becomes $ab$ and the $b$ turns to $bb$, next $abbb$ turns to $abbbbbbb$ (Figure \ref{bsp_productionrules}). 
+This paper will only discuss the deterministic and context-free L-system. We start with an example to get the basic concept of those systems . When looking at $(\{a,\ b\},\ a,\ P)$ where the production rule P describes $a \rightarrow ab$ which means whenever a word contains the letter $a$ it is replaced in the next step for $ab$ and $b \rightarrow bb$ which means every $b$ will be replaced for $bb$. We start with the letter a because our starting word $\omega =a$ in our system $a$ is replaced for $ab$. now we have two letters in our word and each of them will be replaced and they are replaced simultaneously. This is a big difference compared to normal context-free languages where only one symbol is replaced at a time. $ab$ becomes $abbb$ because the $a$ becomes $ab$ and the $b$ turns to $bb$, next $abbb$ turns to $abbbbbbb$ (Figure \ref{bsp_productionrules}).
 
 We will discuss two ways to create an L-System using the turtle-graphics. They are edge-rewriting and node-rewriting. In these rewriting systems the alphabet $V=\{+,-,F\}$. These characters form words that can be interpreted in the turtle graphics. $+$ means turning the head of the turtle to the right and $-$ means turning to the left, both with a predefined angle that does not change in one system. and $F$ stands for going forward.
 The production rules in edge-rewriting replace the $F$, the edges for a new shape. The edges in node-rewriting do not get replaced, there are new symbols $A\notin F$ that have no interpretation in the turtle-graphic. Their only purpose is to be replaced.
 
 \begin{figure}[t]
-    \centering
-    \includegraphics[scale=0.15]{images/produktionsregel_bsp1.png}
-    \caption{Example of words in a deterministic and context-free L-system. }
-    \label{bsp_productionrules}
+  \centering
+  \includegraphics[scale=0.15]{images/produktionsregel_bsp1.png}
+  \caption{Example of words in a deterministic and context-free L-system. }
+  \label{bsp_productionrules}
 \end{figure}
 \subsubsection{Edge rewriting}
 Edge-rewriting is the more intuitive way of creating L-systems. For example, Figure \ref{edge_bsp} shows an L-system $(\{+,-,F\},F,P)$ with $P:=F \rightarrow +F-F$ and an angle $\delta=45$°. As shown earlier, L-systems have terminal symbols and non-terminal symbols. In our example $\{+,-\}$ are terminal symbols, they do not get replaced by our production rule and $F$ is a non-terminal symbol since we have a rule that replaces the $F$ for something else. However our $F$ already had a meaning, namely being an edge in our L-system and so our edge is replaced for a shape as you can see in Figure \ref{edge_bsp}. There is also the possibility to use two $F$, for example having now $F_r$ and $F_l$ for more variation and complexity in our L-system. So now we define $P:= F_r\rightarrow +F_r-F_l ,\ F_l\rightarrow -F_r+F_l$ and we start with the starting word $\omega=F_r$. The first rule is the same rule as in the earlier example and our second rule is the same shape to replace our lines but mirrored to the first rule. As seen in Figure \ref{edge_bsp}, with two reproduction rules, the figure looks more complex.
 \begin{figure}[t]
-    \centering
-    \includegraphics[width=0.5\linewidth]{images/edge_bsp.png}
-    \caption{Example of L-system using edge-rewriting. 1. is before any rule was applied, 2. has a depth of 1. and 3.1 and 3.2 each have a depth of 2.  3.1 was created with one production rule, 3.2 was created with 2 production rules.}
-    \label{edge_bsp}
+  \centering
+  \includegraphics[width=0.5\linewidth]{images/edge_bsp.png}
+  \caption{Example of L-system using edge-rewriting. 1. is before any rule was applied, 2. has a depth of 1. and 3.1 and 3.2 each have a depth of 2.  3.1 was created with one production rule, 3.2 was created with 2 production rules.}
+  \label{edge_bsp}
 \end{figure}
 \subsubsection{Node rewriting}
 For Node-rewriting we do not replace our edges $F$ anymore. We introduce new symbols $\{A,B,C,...\}$ that do not have any meaning in our system already. We will only use the symbol $A$ in our example (Figure \ref{node_bsp}). Our new L-system $(\{+,-,F,A\},FA,P)$ with $P:=A\rightarrow+AF-AF$ and the angle $\delta=45$°. Since the non-terminal symbols do not have any meaning, they do not change the image that we get by illustrating our L-system, but they determine how the next step of the recursion will look like. As you can see in Figure \ref{node_bsp}, the edges that have been drawn in those with less depth, they are also in those with higher depth with new shapes in between them. Again we can create L-systems with multiple rules. We define $P:= A_r\rightarrow+A_r F -A_l F,\ A_l\rightarrow-A_rF+A_lF$ and we choose $\omega=FA_r$. Just like with edge-rewriting the first two recursion steps look similar to the L-system with only one rule but with further depth the difference is clear.
 \begin{figure}[t]
-    \centering
-    \includegraphics[width=0.5\linewidth]{images/node_bsp.png}
-    \caption{Example of L-system using node-rewriting. 1. is before any rule was applied, 2. has a depth of 1. and 3.1 and 3.2 each have a depth of 2.  3.1 was created with one production rule, 3.2 was created with 2 production rules.}
-    \label{node_bsp}
+  \centering
+  \includegraphics[width=0.5\linewidth]{images/node_bsp.png}
+  \caption{Example of L-system using node-rewriting. 1. is before any rule was applied, 2. has a depth of 1. and 3.1 and 3.2 each have a depth of 2.  3.1 was created with one production rule, 3.2 was created with 2 production rules.}
+  \label{node_bsp}
 \end{figure}
 \subsection{Designs}
 The next step for making our fractals look more fabulous is to use designs. Designs are basically an ending repetition of our fractal. Just like we have seen earlier with the koch flake that we have created by repeating the koch curve three times. The first step is to choose any polygon as base for the rewriting. In our example (Figure \ref{muster_bsp}) we will choose a square. With our square, we now have four edges already as base whereas we had only one in our fractal, for edge-rewriting instead of replacing our only line, we now have four lines, each being replaced by our shape (Figure \ref{muster_bsp} left side). We can do the same for node rewriting by placing nodes on the edges that every corner has a node and we replace those nodes for our shape. every time we replace our edges or nodes in any polygon, the line stops there, where it had begun (Figure \ref{muster_bsp})
 \begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{images/muster_bsp.png}
-    \caption{Designs created with a square, the left two designs are examples with edge-rewriting, left with one production rule, right with two production rules. the right two designs are examples with node-rewriting, left with one production rule, right with two production rules. All with a depth of 10.}
-    \label{muster_bsp}
+  \centering
+  \includegraphics[width=0.5\linewidth]{images/muster_bsp.png}
+  \caption{Designs created with a square, the left two designs are examples with edge-rewriting, left with one production rule, right with two production rules. the right two designs are examples with node-rewriting, left with one production rule, right with two production rules. All with a depth of 10.}
+  \label{muster_bsp}
 \end{figure}
 
 \subsection{Branching}
-Using edge/node- rewriting, we can now create many L-systems. By using the turtle graphics, we can draw any number of angles and lines like the Pythagoras tree, the Koch flake or any self made L-system lines or designs. But they will always just be a line, however the world of plants is nothing but a world of branching. Lindenmayer was a Biologist and he wanted to recreate the world of plants. This too is possible to be made both with edge- and node-rewriting but we will only discuss it with edge-rewriting, but it works the same way with node-rewriting.  
+Using edge/node- rewriting, we can now create many L-systems. By using the turtle graphics, we can draw any number of angles and lines like the Pythagoras tree, the Koch flake or any self made L-system lines or designs. But they will always just be a line, however the world of plants is nothing but a world of branching. Lindenmayer was a Biologist and he wanted to recreate the world of plants. This too is possible to be made both with edge- and node-rewriting but we will only discuss it with edge-rewriting, but it works the same way with node-rewriting.
 \subsubsection{Stack}
 First we need to know what a stack is and how it works for us to use branching. A stack is a data structure to safe data. Two functions are used to operate the stack. The first function is push(input). When calling it, input will be written in our stack. The second function is pop(). It does not get any parameters and returns the last thing that was written on the stack removing it at the same time from it. So the stack uses the principle of Last in First out or "LiFo".
 \subsubsection{edge-rewriting with stack}
 We will introduce two new symbols in our alphabet. We define $[:= push((position,direction))$ and $]:= pop()$. Every time that we will use $[$ in a word of our system we save the current position and the direction the turtle is facing and every time we read $]$ in our word the turtle returns to that position and the direction faced when we pushed that position. In our Example we used the L-system $(\{-,+,F,[,]\},F,P)$ with $P:=F\rightarrow F[-F][+F]F$ and $\delta=45$°. In Figure \ref{branch_bsp} we can see how we already have three branches with a depth of 1 in the 2. image. At the 3. image we can see why the stack is important, and why we could not use a list with "FiFo". The word for our 3. image is $F[-F][+F]F[-F[-F][+F]F][+F[-F][+F]F]F[-F][+F]F$ and when we interleave the braces like we did in that word we do not wanna mix up the order, because if we did, the image would already consist of three parts in our example which would not be a fractal anymore.
 
 \begin{figure}[t]
-    \centering
-    \includegraphics[width=0.5\linewidth]{images/branch_bsp.png}
-    \caption{Example of branching with edge-rewriting. Number 1 has depth=0, 2.has depth=1 and Number 3. has depth=2}
-    \label{branch_bsp}
+  \centering
+  \includegraphics[width=0.5\linewidth]{images/branch_bsp.png}
+  \caption{Example of branching with edge-rewriting. Number 1 has depth=0, 2.has depth=1 and Number 3. has depth=2}
+  \label{branch_bsp}
 \end{figure}
 
 \section{Conclusion}

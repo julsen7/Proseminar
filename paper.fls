@@ -77,10 +77,6 @@ INPUT /usr/share/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/share/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 INPUT /usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-INPUT /usr/share/texmf-dist/tex/latex/caption/caption.sty
-INPUT /usr/share/texmf-dist/tex/latex/caption/caption.sty
-INPUT /usr/share/texmf-dist/tex/latex/caption/caption3.sty
-INPUT /usr/share/texmf-dist/tex/latex/caption/caption3.sty
 INPUT /usr/share/texmf-dist/tex/latex/csquotes/csquotes.sty
 INPUT /usr/share/texmf-dist/tex/latex/csquotes/csquotes.sty
 INPUT /usr/share/texmf-dist/tex/latex/csquotes/csquotes.def
@@ -222,6 +218,11 @@ INPUT ./images/sierpinski_triangle.png
 INPUT ./images/sierpinski_triangle.png
 INPUT ./images/sierpinski_triangle.png
 INPUT ./images/sierpinski_triangle.png
+INPUT ./images/koch_flake.png
+INPUT ./images/koch_flake.png
+INPUT ./images/koch_flake.png
+INPUT ./images/koch_flake.png
+INPUT ./images/koch_flake.png
 INPUT ./images/produktionsregel_bsp1.png
 INPUT ./images/produktionsregel_bsp1.png
 INPUT ./images/produktionsregel_bsp1.png
