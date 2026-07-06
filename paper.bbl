@@ -19,12 +19,7 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
-    \entry{geeksforgeeks}{online}{}{}
-      \field{sortinit}{}
-      \field{sortinithash}{495dc9894017a8b12cafa9c619d10c0c}
-      \field{howpublished}{\url{https://www.geeksforgeeks.org/dsa/introduction-to-recursion-2/}}
-    \endentry
-    \entry{alfonseca1996representation}{inproceedings}{}{}
+    \entry{representation}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=03029fe3031d3e6a1aa8d680194091de}{%
            family={Alfonseca},
@@ -55,40 +50,210 @@
       \field{pages}{13\bibrangedash 21}
       \range{pages}{9}
     \endentry
-    \entry{maxplanckgesellschaft}{online}{}{}
-      \field{sortinit}{E}
-      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+    \entry{maxplanck}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=a684dd572b1887661782981659331eed}{%
+           family={anonym},
+           familyi={a\bibinitperiod}}}%
+      }
+      \strng{namehash}{a684dd572b1887661782981659331eed}
+      \strng{fullhash}{a684dd572b1887661782981659331eed}
+      \strng{fullhashraw}{a684dd572b1887661782981659331eed}
+      \strng{bibnamehash}{a684dd572b1887661782981659331eed}
+      \strng{authorbibnamehash}{a684dd572b1887661782981659331eed}
+      \strng{authornamehash}{a684dd572b1887661782981659331eed}
+      \strng{authorfullhash}{a684dd572b1887661782981659331eed}
+      \strng{authorfullhashraw}{a684dd572b1887661782981659331eed}
+      \field{extraname}{1}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\urls{https://www.mpg.de/21808266/erstes-fraktales-molekuel-in-der-natur-entdeckt}}
       \field{title}{Erstes fraktales Molekül in der Natur entdeckt}
       \field{year}{2024}
     \endentry
-    \entry{hromkovic2010einfuhrung}{book}{}{}
+    \entry{datatypes}{misc}{}{}
       \name{author}{1}{}{%
-        {{hash=a3b563fb40f27627f52813573a32b304}{%
-           family={Hromkovic},
+        {{hash=a684dd572b1887661782981659331eed}{%
+           family={anonym},
+           familyi={a\bibinitperiod}}}%
+      }
+      \strng{namehash}{a684dd572b1887661782981659331eed}
+      \strng{fullhash}{a684dd572b1887661782981659331eed}
+      \strng{fullhashraw}{a684dd572b1887661782981659331eed}
+      \strng{bibnamehash}{a684dd572b1887661782981659331eed}
+      \strng{authorbibnamehash}{a684dd572b1887661782981659331eed}
+      \strng{authornamehash}{a684dd572b1887661782981659331eed}
+      \strng{authorfullhash}{a684dd572b1887661782981659331eed}
+      \strng{authorfullhashraw}{a684dd572b1887661782981659331eed}
+      \field{extraname}{2}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.calormen.com/jslogo/language.html}}
+      \field{note}{[Accessed 30-06-2026]}
+      \field{title}{{L}ogo {L}anguage {G}uide --- calormen.com}
+    \endentry
+    \entry{procedures}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=3bc74e1f84908e583766f8adc2d42eb4}{%
+           family={Harvey},
            familyi={H\bibinitperiod},
-           given={Juraj},
-           giveni={J\bibinitperiod}}}%
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {Springer}%
+        {MIT press}%
       }
-      \strng{namehash}{a3b563fb40f27627f52813573a32b304}
-      \strng{fullhash}{a3b563fb40f27627f52813573a32b304}
-      \strng{fullhashraw}{a3b563fb40f27627f52813573a32b304}
-      \strng{bibnamehash}{a3b563fb40f27627f52813573a32b304}
-      \strng{authorbibnamehash}{a3b563fb40f27627f52813573a32b304}
-      \strng{authornamehash}{a3b563fb40f27627f52813573a32b304}
-      \strng{authorfullhash}{a3b563fb40f27627f52813573a32b304}
-      \strng{authorfullhashraw}{a3b563fb40f27627f52813573a32b304}
+      \strng{namehash}{3bc74e1f84908e583766f8adc2d42eb4}
+      \strng{fullhash}{3bc74e1f84908e583766f8adc2d42eb4}
+      \strng{fullhashraw}{3bc74e1f84908e583766f8adc2d42eb4}
+      \strng{bibnamehash}{3bc74e1f84908e583766f8adc2d42eb4}
+      \strng{authorbibnamehash}{3bc74e1f84908e583766f8adc2d42eb4}
+      \strng{authornamehash}{3bc74e1f84908e583766f8adc2d42eb4}
+      \strng{authorfullhash}{3bc74e1f84908e583766f8adc2d42eb4}
+      \strng{authorfullhashraw}{3bc74e1f84908e583766f8adc2d42eb4}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Einführung in die Programmierung mit LOGO}
-      \field{volume}{206}
-      \field{year}{2010}
+      \field{title}{Computer science logo style: Symbolic computing}
+      \field{volume}{1}
+      \field{year}{1997}
+    \endentry
+    \entry{geeksforgeeks}{online}{}{}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.geeksforgeeks.org/dsa/introduction-to-recursion-2/}}
+      \field{note}{[Accessed 01-07-2026]}
+      \field{title}{Introduction to Recursion}
+      \field{year}{2026}
+    \endentry
+    \entry{lieberman}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=640ab2ee10ffde04d380ff4890e8b7b0}{%
+           family={Lieberman},
+           familyi={L\bibinitperiod},
+           given={Henry},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{640ab2ee10ffde04d380ff4890e8b7b0}
+      \strng{fullhash}{640ab2ee10ffde04d380ff4890e8b7b0}
+      \strng{fullhashraw}{640ab2ee10ffde04d380ff4890e8b7b0}
+      \strng{bibnamehash}{640ab2ee10ffde04d380ff4890e8b7b0}
+      \strng{authorbibnamehash}{640ab2ee10ffde04d380ff4890e8b7b0}
+      \strng{authornamehash}{640ab2ee10ffde04d380ff4890e8b7b0}
+      \strng{authorfullhash}{640ab2ee10ffde04d380ff4890e8b7b0}
+      \strng{authorfullhashraw}{640ab2ee10ffde04d380ff4890e8b7b0}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The papers of the ACM Symposium on Graphic Languages}
+      \field{title}{The TV Turtle a Logo graphics system for raster displays}
+      \field{year}{1976}
+      \field{pages}{66\bibrangedash 72}
+      \range{pages}{7}
+    \endentry
+    \entry{lsystem}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=9b2d19fde5df78b690670244c09547c1}{%
+           family={Prusinkiewicz},
+           familyi={P\bibinitperiod},
+           given={Przemyslaw},
+           giveni={P\bibinitperiod}}}%
+        {{hash=5d4294b94133425c7709fd0292a3fa25}{%
+           family={Lindenmayer},
+           familyi={L\bibinitperiod},
+           given={Aristid},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{de3badefe2f237fd104eb8f8ff8da121}
+      \strng{fullhash}{de3badefe2f237fd104eb8f8ff8da121}
+      \strng{fullhashraw}{de3badefe2f237fd104eb8f8ff8da121}
+      \strng{bibnamehash}{de3badefe2f237fd104eb8f8ff8da121}
+      \strng{authorbibnamehash}{de3badefe2f237fd104eb8f8ff8da121}
+      \strng{authornamehash}{de3badefe2f237fd104eb8f8ff8da121}
+      \strng{authorfullhash}{de3badefe2f237fd104eb8f8ff8da121}
+      \strng{authorfullhashraw}{de3badefe2f237fd104eb8f8ff8da121}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The algorithmic beauty of plants}
+      \field{year}{2012}
+    \endentry
+    \entry{history}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=4435c607947b1737bcbe574854e5be13}{%
+           family={Solomon},
+           familyi={S\bibinitperiod},
+           given={Cynthia},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3bc74e1f84908e583766f8adc2d42eb4}{%
+           family={Harvey},
+           familyi={H\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=e08c26fec097b613438f0774fdbf2188}{%
+           family={Kahn},
+           familyi={K\bibinitperiod},
+           given={Ken},
+           giveni={K\bibinitperiod}}}%
+        {{hash=640ab2ee10ffde04d380ff4890e8b7b0}{%
+           family={Lieberman},
+           familyi={L\bibinitperiod},
+           given={Henry},
+           giveni={H\bibinitperiod}}}%
+        {{hash=b32f388d059662d8de154c9bda979b5f}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Mark\bibnamedelima L},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=5b338deda642a2217e953c191c353155}{%
+           family={Minsky},
+           familyi={M\bibinitperiod},
+           given={Margaret},
+           giveni={M\bibinitperiod}}}%
+        {{hash=faa3b799142840f8d1c1b6a56459995c}{%
+           family={Papert},
+           familyi={P\bibinitperiod},
+           given={Artemis},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7774a75ded80a2cb4d96fe9d19a77c32}{%
+           family={Silverman},
+           familyi={S\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY, USA}%
+      }
+      \strng{namehash}{635a63d5dd8340b8941c0420d115b4ee}
+      \strng{fullhash}{b457ab747404713b89e88a2bd2416071}
+      \strng{fullhashraw}{b457ab747404713b89e88a2bd2416071}
+      \strng{bibnamehash}{635a63d5dd8340b8941c0420d115b4ee}
+      \strng{authorbibnamehash}{635a63d5dd8340b8941c0420d115b4ee}
+      \strng{authornamehash}{635a63d5dd8340b8941c0420d115b4ee}
+      \strng{authorfullhash}{b457ab747404713b89e88a2bd2416071}
+      \strng{authorfullhashraw}{b457ab747404713b89e88a2bd2416071}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the ACM on Programming Languages}
+      \field{number}{HOPL}
+      \field{title}{History of logo}
+      \field{volume}{4}
+      \field{year}{2020}
+      \field{pages}{1\bibrangedash 66}
+      \range{pages}{66}
     \endentry
     \entry{mathworld2}{online}{}{}
       \name{author}{1}{}{%
@@ -110,7 +275,10 @@
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
       \field{howpublished}{\urls{https://mathworld.wolfram.com/KochSnowflake.html}}
+      \field{note}{[Accessed 01-07-2026]}
+      \field{title}{"Koch Snowflake." From MathWorld--A Wolfram Resource.}
     \endentry
     \entry{mathworld}{online}{}{}
       \name{author}{1}{}{%
@@ -134,6 +302,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\urls{https://mathworld.wolfram.com/PythagorasTree.html}}
+      \field{note}{[Accessed 01-07-2026]}
       \field{title}{"Pythagoras Tree." From MathWorld--A Wolfram Resource.}
     \endentry
   \enddatalist

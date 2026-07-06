@@ -2373,12 +2373,19 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">literatur.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">hromkovic2010einfuhrung</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">geeksforgeeks</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">mathworld</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">alfonseca1996representation</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">maxplanckgesellschaft</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">mathworld2</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">history</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">lieberman</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">datatypes</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">procedures</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">datatypes</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">geeksforgeeks</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">mathworld</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">representation</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">maxplanck</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">mathworld2</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">lsystem</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">lsystem</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">lsystem</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
